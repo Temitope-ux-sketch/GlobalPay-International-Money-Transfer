@@ -1,0 +1,1 @@
+import { create } from 'zustand';\n\nexport const useAuthStore = create((set) => ({\n  user: null,\n  token: null,\n  \n  setAuth: (user, token) => {\n    set({ user, token });\n  },\n  \n  logout: () => {\n    set({ user: null, token: null });\n  },\n  \n  updateUser: (user) => {\n    set({ user });\n  }\n}));\n
